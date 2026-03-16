@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ConfigReader;
+import utils.DriverFactory;
 
 public class BaseTest {
 	
@@ -18,10 +19,8 @@ public class BaseTest {
 		
 		config = new ConfigReader();
 		
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = DriverFactory.initializeDriver(config.getBrowser());
 		
-		driver.manage().window().maximize();
 		driver.get(config.getUrl());
 	}
 	
