@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.LoginPage;
-import utils.ConfigReader;
+//import utils.ConfigReader;
 
 public class LoginTest extends BaseTest{
 	
