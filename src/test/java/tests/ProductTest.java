@@ -7,10 +7,11 @@ import base.BaseTest;
 import pages.LoginPage;
 import pages.ProductsPage;
 import utils.ConfigReader;
+import utils.RetryAnalyzer;
 
 public class ProductTest extends BaseTest{
 	
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void addToCartTest() {
 		
 		ConfigReader config = new ConfigReader();
