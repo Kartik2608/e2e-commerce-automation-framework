@@ -1,0 +1,5 @@
+base\BaseTest.class
+utils\RetryAnalyzer.class
+tests\LoginTest.class
+tests\ProductTest.class
+tests\TestData.class
