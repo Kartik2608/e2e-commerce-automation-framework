@@ -13,6 +13,8 @@ import utils.ConfigReader;
 import utils.DriverFactory;
 import utils.ScreenshotUtils;
 
+
+
 public class BaseTest {
 	
 	protected WebDriver driver;
@@ -38,7 +40,9 @@ public class BaseTest {
 		
 		if(ITestResult.FAILURE == result.getStatus()) {
 			ScreenshotUtils.captureScreenshot(driver, result.getName());
-			log.error("Test Failed: Screenshot captured");
+			ScreenshotUtils.attachScreenShot(driver);
+			
+			log.error("Test Failed: Screenshot attached to Allure report");
 		}
 		
 		driver.quit();
